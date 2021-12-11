@@ -1,0 +1,15 @@
+C:\Users\Hortmann\Desktop\Pong Game\bin\Debug\net6.0\Pong Game.exe
+C:\Users\Hortmann\Desktop\Pong Game\bin\Debug\net6.0\Pong Game.deps.json
+C:\Users\Hortmann\Desktop\Pong Game\bin\Debug\net6.0\Pong Game.runtimeconfig.json
+C:\Users\Hortmann\Desktop\Pong Game\bin\Debug\net6.0\Pong Game.dll
+C:\Users\Hortmann\Desktop\Pong Game\bin\Debug\net6.0\ref\Pong Game.dll
+C:\Users\Hortmann\Desktop\Pong Game\bin\Debug\net6.0\Pong Game.pdb
+C:\Users\Hortmann\Desktop\Pong Game\obj\Debug\net6.0\Pong Game.csproj.AssemblyReference.cache
+C:\Users\Hortmann\Desktop\Pong Game\obj\Debug\net6.0\Pong Game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hortmann\Desktop\Pong Game\obj\Debug\net6.0\Pong Game.AssemblyInfoInputs.cache
+C:\Users\Hortmann\Desktop\Pong Game\obj\Debug\net6.0\Pong Game.AssemblyInfo.cs
+C:\Users\Hortmann\Desktop\Pong Game\obj\Debug\net6.0\Pong Game.csproj.CoreCompileInputs.cache
+C:\Users\Hortmann\Desktop\Pong Game\obj\Debug\net6.0\Pong Game.dll
+C:\Users\Hortmann\Desktop\Pong Game\obj\Debug\net6.0\ref\Pong Game.dll
+C:\Users\Hortmann\Desktop\Pong Game\obj\Debug\net6.0\Pong Game.pdb
+C:\Users\Hortmann\Desktop\Pong Game\obj\Debug\net6.0\Pong Game.genruntimeconfig.cache
