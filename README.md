@@ -1,2 +1,2 @@
 # Pong-Game
-made using C# (without Unity)
+made using C# with .NET 6.0 (without Unity)
