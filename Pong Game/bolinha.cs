@@ -4,172 +4,175 @@ using System.Threading;
 namespace bo {
     public class ball {
         protected int estado = 0;
-        protected int b=15, score=0;
-        public int a=0;
+        protected int x=15, score=0;
+        private int y=0;
         public ball(String[,] campo) {
             Random rand = new Random();
-            a = rand.Next(5,9);
-            campo[a,15] = "*";
+            this.y = rand.Next(5,9);
+            campo[y,15] = "*";
         }
         public void resetb(String[,] campo) {
-            campo[a,b] = "-";
-            b=15;
+            campo[y,x] = "-";
+            this.x=15;
             Random rand = new Random();
-            a = rand.Next(5,9);
-            campo[a,15] = "*";
+            this.y = rand.Next(5,9);
+            campo[y,15] = "*";
         }
-        public void mexer(String[,] campo, ref bool lado, ref int sc, ref int a, ref int sc2) {
+        public int getPosition() {
+            return this.y;
+        }
+        public void mexer(String[,] campo, ref bool lado, ref int sc, ref int sc2) {
             if(estado==0) {
-                if(b-1==0) { 
+                if(x-1==0) { 
                     try {
-                    if(campo[a-1,b-1]=="|" ) { 
+                    if(campo[y-1,x-1]=="|" ) { 
                         lado =  false;
-                        campo[a,b] = "-";
-                        b++;
-                        campo[a,b] = "*";
+                        campo[y,x] = "-";
+                        x++;
+                        campo[y,x] = "*";
                     }
                     else {
                         Console.WriteLine("\n\nYou Lose!!");
                         Thread.Sleep(1000);
                         sc2++;
-                        b++;
+                        x++;
                     }
                 }catch(Exception) {
-                        if(campo[a,b-1]=="|" || campo[a+1,b-1]=="|") { 
+                        if(campo[y,x-1]=="|" || campo[y+1,x-1]=="|") { 
                         lado =  false;
-                        campo[a,b] = "-";
-                        b++;
-                        campo[a,b] = "*";
+                        campo[y,x] = "-";
+                        x++;
+                        campo[y,x] = "*";
                     }
                     else {
                         Console.WriteLine("\n\nYou Lose!!");
                         Thread.Sleep(1000);
                         sc2++;
-                        b++;
+                        x++;
                     }
                 }
                 }
-                if(b+1==29) {
+                if(x+1==29) {
                     try{
-                    if(campo[a-1,b+1]=="|") {
+                    if(campo[y-1,x+1]=="|") {
                         lado =  true;
-                        campo[a,b] = "-";
-                        b--;
-                        campo[a,b] = "*";
+                        campo[y,x] = "-";
+                        x--;
+                        campo[y,x] = "*";
                     }
                     else {
                         Console.WriteLine("\n\nYou Win!!");
                         Thread.Sleep(1000);
                         sc++;
-                        b--;
+                        x--;
                     }
                 } catch(Exception) {
-                    if(campo[a,b+1]=="|" || campo[a+1,b+1]=="|") {
+                    if(campo[y,x+1]=="|" || campo[y+1,x+1]=="|") {
                         lado =  true;
-                        campo[a,b] = "-";
-                        b--;
-                        campo[a,b] = "*";
+                        campo[y,x] = "-";
+                        x--;
+                        campo[y,x] = "*";
                     }
                     else {
                         Console.WriteLine("\n\nYou Win!!");
                         Thread.Sleep(1000);
                         sc++;
-                        b--;                     
+                        x--;                     
                     }
                 }
                 }
-                else if(a-1==-1) {
+                else if(y-1==-1) {
                     estado = 1;
                 }
                 else{
                     if(lado==true) {
-                        campo[a,b] = "-";
-                        b--;
-                        a--;
-                        campo[a,b] = "*";
+                        campo[y,x] = "-";
+                        x--;
+                        y--;
+                        campo[y,x] = "*";
                     }
                     else if(lado==false) {
-                        campo[a,b] = "-";
-                        b++;
-                        a--;
-                        campo[a,b] = "*";
+                        campo[y,x] = "-";
+                        x++;
+                        y--;
+                        campo[y,x] = "*";
                     }
                 }
             }
             if(estado==1) {
-                if(b-1==0) { 
+                if(x-1==0) { 
                     try {
-                    if(campo[a+1,b-1]=="|") { 
+                    if(campo[y+1,x-1]=="|") { 
                         lado =  false;
-                        campo[a,b] = "-";
-                        b++;
-                        campo[a,b] = "*";
+                        campo[y,x] = "-";
+                        x++;
+                        campo[y,x] = "*";
                     }
                     else {
                         Console.WriteLine("\n\nYou Lose!!");
                         Thread.Sleep(1000);
                         sc2++;
-                        b++;
+                        x++;
                     }
                     } catch(Exception) {
-                        if(campo[a,b-1]=="|" || campo[a-1,b-1]=="|") { 
+                        if(campo[y,x-1]=="|" || campo[y-1,x-1]=="|") { 
                         lado =  false;
-                        campo[a,b] = "-";
-                        b++;
-                        campo[a,b] = "*";
+                        campo[y,x] = "-";
+                        x++;
+                        campo[y,x] = "*";
                     }
                     else {
                         Console.WriteLine("\n\nYou Lose!!");
                         Thread.Sleep(1000);
                         sc2++;
-                        b++;
+                        x++;
                     }
                     }
                 }
-                if(b+1==29) {
+                if(x+1==29) {
                     try {
-                    if(campo[a+1,b+1]=="|") {
+                    if(campo[y+1,x+1]=="|") {
                         lado =  true;
-                        campo[a,b] = "-";
-                        b--;
-                        campo[a,b] = "*";
+                        campo[y,x] = "-";
+                        x--;
+                        campo[y,x] = "*";
                     }
                     else {
                         Console.WriteLine("\n\nYou Win!!");
                         Thread.Sleep(1000);
                         sc++;
-                        b--;
+                        x--;
                     }
                     } catch(Exception) {
-                        if(campo[a,b+1]=="|" || campo[a-1,b+1]=="|") {
+                        if(campo[y,x+1]=="|" || campo[y-1,x+1]=="|") {
                         lado =  true;
-                        campo[a,b] = "-";
-                        b--;
-                        campo[a,b] = "*";
+                        campo[y,x] = "-";
+                        x--;
+                        campo[y,x] = "*";
                     }
                     else {
                         Console.WriteLine("\n\nYou Win!!");
                         Thread.Sleep(1000);
                         sc++;
-                        b--;
+                        x--;
                     }
                     }
                 }
-                else if(a+1==15) {
+                else if(y+1==15) {
                     estado = 0;
                 }
                 else {
                 if(lado==true) {
-                        campo[a,b] = "-";
-                        b--;
-                        a++;
-                        campo[a,b] = "*";
+                        campo[y,x] = "-";
+                        x--;
+                        y++;
+                        campo[y,x] = "*";
                     }
                 else if(lado==false) {
-                        campo[a,b] = "-";
-                        b++;
-                        a++;
-                        campo[a,b] = "*";
+                        campo[y,x] = "-";
+                        x++;
+                        y++;
+                        campo[y,x] = "*";
                     }
             }
             }

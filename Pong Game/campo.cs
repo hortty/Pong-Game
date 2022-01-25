@@ -1,9 +1,13 @@
 using System;
 using System.Threading;
+using bo;
+using jogador;
 
 namespace cam {
     public class camp {
         public String[,] campo = new String[15,30];
+        public ball b;
+        public player p;
         protected int s=0, s1=0;
         public camp() {
             for(int i=0;i<15;i++) {
@@ -11,6 +15,8 @@ namespace cam {
                     campo[i,j] = "-";
             }
             }
+            b = new ball(campo);
+            p = new player(campo, b.getPosition());
         }
         public void resetc() {
             for(int i=0;i<15;i++) {

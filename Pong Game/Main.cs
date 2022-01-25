@@ -5,9 +5,8 @@ using cam;
 using jogador;
 
 camp c = new camp();
-ball b = new ball(c.campo);
-int pontos=0, pontos2=0, pontos3=0, pont=0,posb=b.a;
-player p = new player(c.campo, posb);
+
+int pontos=0, pontos2=0, pontos3=0, pont=0;
 
 bool flag = true, flag2=true;
 bool lado = true;
@@ -38,25 +37,25 @@ while(flag)
 {
   if( Console.KeyAvailable )
   {
-    p.movement(c.campo, ref flag, ref flag2, posb);
+    c.p.movement(c.campo, ref flag, ref flag2, c.b.getPosition());
   }
-    p.move(c.campo, posb);
+    c.p.move(c.campo, c.b.getPosition());
     if(flag2==false) {
     Console.ReadKey();
     flag2=true;
     }
-    b.mexer(c.campo, ref lado, ref pontos, ref posb, ref pont);
+    c.b.mexer(c.campo, ref lado, ref pontos, ref pont);
     c.print(pontos, pont);
     if(pontos>pontos2) {
-    b.resetb(c.campo);
+    c.b.resetb(c.campo);
     c.resetc();
-    p.resetp(c.campo, posb);
+    c.p.resetp(c.campo, c.b.getPosition());
     pontos2=pontos;
     }
     if(pont>pontos3) {
-    b.resetb(c.campo);
+    c.b.resetb(c.campo);
     c.resetc();
-    p.resetp(c.campo, posb);
+    c.p.resetp(c.campo, c.b.getPosition());
     pontos3=pont;
     }
     Console.WriteLine();

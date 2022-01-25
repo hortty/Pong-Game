@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hortmann\\Desktop\\Pong Game\\Pong Game.csproj": {}
+    "C:\\workspace\\Pong-Game\\Pong Game\\Pong Game.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hortmann\\Desktop\\Pong Game\\Pong Game.csproj": {
+    "C:\\workspace\\Pong-Game\\Pong Game\\Pong Game.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hortmann\\Desktop\\Pong Game\\Pong Game.csproj",
+        "projectUniqueName": "C:\\workspace\\Pong-Game\\Pong Game\\Pong Game.csproj",
         "projectName": "Pong Game",
-        "projectPath": "C:\\Users\\Hortmann\\Desktop\\Pong Game\\Pong Game.csproj",
+        "projectPath": "C:\\workspace\\Pong-Game\\Pong Game\\Pong Game.csproj",
         "packagesPath": "C:\\Users\\Hortmann\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hortmann\\Desktop\\Pong Game\\obj\\",
+        "outputPath": "C:\\workspace\\Pong-Game\\Pong Game\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hortmann\\AppData\\Roaming\\NuGet\\NuGet.Config"

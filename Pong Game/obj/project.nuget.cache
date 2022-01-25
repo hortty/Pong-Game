@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ldDmvhW9U+7uIml89wQkw/heNIA8TpCSzv7PFTRgMZ2jgmWMY15eq1cB0cWltuoNkx20mw9fTzXRF2gsQAL/5Q==",
+  "dgSpecHash": "Sqc5Ftpaog07J3s55MyONnt/mRpIyPaiP+emzzWOp6IJW0FrZIXlfQY+Mp312H4VontvG6NFpyM5yCwDDnwn0A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Hortmann\\Desktop\\Pong Game\\Pong Game.csproj",
+  "projectFilePath": "C:\\workspace\\Pong-Game\\Pong Game\\Pong Game.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

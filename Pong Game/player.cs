@@ -5,8 +5,8 @@ namespace jogador {
     public class player {
         protected int pos = 6, pos2=6;
         protected int win=0;
-        public player(String[,] campo, int ppp) {
-            pos2=ppp;
+        public player(String[,] campo, int posball) {
+            pos2=posball;
             campo[7,0] = "|";
             campo[8,0] = "|";
             campo[6,0] = "|";
@@ -19,8 +19,8 @@ namespace jogador {
             Random ran1 = new Random();
             win = ran1.Next(0,2);
         }
-        public void resetp(String[,] campo, int ppp) {
-            pos2=ppp;
+        public void resetp(String[,] campo, int posball) {
+            pos2=posball;
             pos = 6;
             campo[7,0] = "|";
             campo[8,0] = "|";
@@ -72,7 +72,7 @@ namespace jogador {
                     } 
                 }
         }
-        public void move(String[,] campo, int po) {
+        public void move(String[,] campo, int po) {            //funcao que faz a movimentacao do bot
                 Thread.Sleep(10);
                 if(win==0) {
                     if((pos2+1)>=po) {
